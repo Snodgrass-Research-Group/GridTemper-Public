@@ -1,0 +1,25 @@
+# GridTemper configuration (optional). Load with:
+#   python -m uv run python scripts/run_tx2030.py --config gridtemper.toml
+# The --ac-backend CLI flag overrides [solver].ac_backend.
+
+[solver]
+# AC power-flow solver for the pipeline's (well-posed) AC solve:
+#   builtin    - from-scratch scipy Newton-Raphson (no extra deps; solves the
+#                full TX-2030 case)
+#   pandapower - pandapower runpp (extra [pandapower]); validated on small/medium
+#                cases — the full 7132-bus case may not converge with defaults
+#   powerworld - PowerWorld Simulator via SimAuto (extra [powerworld]; needs a
+#                PowerWorld install whose SimAuto permits building a case)
+ac_backend = "builtin"
+# newton_damping = 1.0        # builtin under-relaxation (1.0 = full Newton)
+# powerworld_pwb = "C:/path/to/your_case.PWB"
+#   ^ for ac_backend="powerworld": open+solve this .PWB (works where building a
+#     case from SimAuto does not)
+
+[case]
+# slack_bus = 1747            # 1-based internal slack index
+# rng_seed  = 2030
+
+[dispatch]
+# backend = "auto"            # auto | gurobi | fallback
+# reserve = 0.15

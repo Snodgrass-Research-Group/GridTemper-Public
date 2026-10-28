@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use GridTemper, please cite it as below."
+title: "GridTemper"
+type: software
+license: MIT
+repository-code: "https://github.com/Snodgrass-Research-Group/GridTemper-Public"
+authors:
+  - family-names: Snodgrass
+    given-names: Jonathan M.
+    orcid: "https://orcid.org/0000-0003-2305-8136"
