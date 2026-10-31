@@ -241,7 +241,7 @@ The data in `inputs/` and `gridtemper/data/` are licensed under CC BY 4.0 (see
 
 | Files | Contents | Original source |
 |---|---|---|
-| `inputs/*.csv` | TX-2030 case: buses, branches, generators, cost curves, demand | 2030 update of the Texas A&M synthetic Texas 7,000-bus grid (ACTIVSg7k lineage) |
+| `inputs/*.csv` | TX-2030 case: buses, branches, generators, cost curves, demand | 2030 version of Texas A&M's synthetic Texas7k grid (Texas7k 2030 PowerWorld cases) |
 | `gridtemper/data/conductors.parquet`, `gmd_*.parquet` | Conductor catalogue and conductor-spacing (GMD) tables | Dissertation conductor tables |
 | `gridtemper/data/xf_*.parquet` | Typical transformer reactances and X/R ratios | Rule-of-thumb tables from the dissertation |
 
